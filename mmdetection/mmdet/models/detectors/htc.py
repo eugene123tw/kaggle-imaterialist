@@ -1,9 +1,9 @@
 import torch
 import torch.nn.functional as F
 
-from mmdet.core import (bbox2result, build_assigner, build_sampler,
+from mmdetection.mmdet.core import (bbox2result, build_assigner, build_sampler,
                         bbox_mapping)
-from mmdet.core import (bbox2roi, merge_aug_masks, merge_aug_bboxes, multiclass_nms)
+from mmdetection.mmdet.core import (bbox2roi, merge_aug_masks, merge_aug_bboxes, multiclass_nms)
 from .cascade_rcnn import CascadeRCNN
 from .test_mixins import RPNTestMixin
 from .. import builder

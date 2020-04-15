@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from mmcv.cnn import normal_init
 
-from mmdet.core import (sigmoid_focal_loss, iou_loss, multi_apply,
+from mmdetection.mmdet.core import (sigmoid_focal_loss, iou_loss, multi_apply,
                         multiclass_nms, distance2bbox)
 from ..registry import HEADS
 from ..utils import bias_init_with_prob, Scale, ConvModule

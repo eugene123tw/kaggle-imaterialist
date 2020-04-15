@@ -9,11 +9,10 @@ import torch.distributed as dist
 from mmcv.runner import load_checkpoint, get_dist_info
 from mmcv.parallel import MMDataParallel, MMDistributedDataParallel
 
-from mmdet.apis import init_dist
-from mmdet.core import results2json, coco_eval
-from mmdet.datasets import build_dataloader, get_dataset
-from mmdet.models import build_detector
-
+from mmdetection.mmdet.apis import init_dist
+from mmdetection.mmdet.core import results2json, coco_eval
+from mmdetection.mmdet.datasets import build_dataloader, get_dataset
+from mmdetection.mmdet.models import build_detector
 
 def single_gpu_test(model, data_loader, show=False):
     model.eval()
@@ -102,8 +101,14 @@ def collect_results(result_part, size, tmpdir=None):
 
 def parse_args():
     parser = argparse.ArgumentParser(description='MMDet test detector')
-    parser.add_argument('config', help='test config file path')
-    parser.add_argument('checkpoint', help='checkpoint file')
+    parser.add_argument(
+        '--config', help='test config file path',
+        default="/home/eugene/git/kaggle-imaterialist/configs/htc_dconv_c3-c5_mstrain_x101_64x4d_fpn_20e_1200x1900.py"
+    )
+    parser.add_argument(
+        '--checkpoint', help='checkpoint file',
+        default="/home/eugene/_MODELS/imaterialist/sota_imat_epoch_15.pth"
+    )
     parser.add_argument('--out', help='output result file')
     parser.add_argument('--ann_file', default=None, type=str)
     parser.add_argument('--img_prefix', default=None, type=str)

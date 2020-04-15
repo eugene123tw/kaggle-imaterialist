@@ -2,7 +2,7 @@ import math
 
 import torch.nn as nn
 
-from mmdet.ops import DeformConv, ModulatedDeformConv
+from mmdetection.mmdet.ops import DeformConv, ModulatedDeformConv
 from .resnet import Bottleneck as _Bottleneck
 from .resnet import ResNet
 from ..registry import BACKBONES

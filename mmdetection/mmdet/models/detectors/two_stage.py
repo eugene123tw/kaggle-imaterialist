@@ -5,7 +5,7 @@ from .base import BaseDetector
 from .test_mixins import RPNTestMixin, BBoxTestMixin, MaskTestMixin
 from .. import builder
 from ..registry import DETECTORS
-from mmdet.core import bbox2roi, bbox2result, build_assigner, build_sampler
+from mmdetection.mmdet.core import bbox2roi, bbox2result, build_assigner, build_sampler
 
 
 @DETECTORS.register_module

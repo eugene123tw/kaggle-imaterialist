@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from mmdet.core import (delta2bbox, multiclass_nms, bbox_target,
+from mmdetection.mmdet.core import (delta2bbox, multiclass_nms, bbox_target,
                         weighted_cross_entropy, weighted_smoothl1, accuracy)
 from ..registry import HEADS
 

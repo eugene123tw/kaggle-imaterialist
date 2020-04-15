@@ -1,6 +1,6 @@
 from torch.autograd import Function
 
-from .. import roi_align_cuda
+from mmdetection.mmdet.ops.roi_align import roi_align_cuda
 
 
 class RoIAlignFunction(Function):

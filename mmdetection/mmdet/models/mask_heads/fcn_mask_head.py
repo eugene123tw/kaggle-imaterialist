@@ -6,7 +6,7 @@ import torch.nn as nn
 
 from ..registry import HEADS
 from ..utils import ConvModule
-from mmdet.core import mask_cross_entropy, mask_target
+from mmdetection.mmdet.core import mask_cross_entropy, mask_target
 
 
 @HEADS.register_module

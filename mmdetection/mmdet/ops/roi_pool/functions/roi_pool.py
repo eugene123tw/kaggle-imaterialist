@@ -1,7 +1,7 @@
 import torch
 from torch.autograd import Function
 
-from .. import roi_pool_cuda
+from mmdetection.mmdet.ops.roi_pool import roi_pool_cuda
 
 
 class RoIPoolFunction(Function):

@@ -6,10 +6,10 @@ import pycocotools.mask as maskUtils
 import torch
 from mmcv.runner import load_checkpoint
 
-from mmdet.core import get_classes
-from mmdet.datasets import to_tensor
-from mmdet.datasets.transforms import ImageTransform
-from mmdet.models import build_detector
+from mmdetection.mmdet.core import get_classes
+from mmdetection.mmdet.datasets import to_tensor
+from mmdetection.mmdet.datasets.transforms import ImageTransform
+from mmdetection.mmdet.models import build_detector
 
 
 def init_detector(config, checkpoint=None, device='cuda:0'):
@@ -37,8 +37,8 @@ def init_detector(config, checkpoint=None, device='cuda:0'):
             model.CLASSES = checkpoint['meta']['classes']
         else:
             warnings.warn('Class names are not saved in the checkpoint\'s '
-                          'meta data, use COCO classes by default.')
-            model.CLASSES = get_classes('coco')
+                          'meta data, use iMaterialist classes by default.')
+            model.CLASSES = get_classes('iMaterialist')
     model.cfg = config  # save the config in the model for convenience
     model.to(device)
     model.eval()

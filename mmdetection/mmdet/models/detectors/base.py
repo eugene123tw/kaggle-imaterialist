@@ -6,7 +6,7 @@ import numpy as np
 import torch.nn as nn
 import pycocotools.mask as maskUtils
 
-from mmdet.core import tensor2imgs, get_classes
+from mmdetection.mmdet.core import tensor2imgs, get_classes
 
 
 class BaseDetector(nn.Module):

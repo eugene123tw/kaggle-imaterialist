@@ -3,7 +3,7 @@ from __future__ import division
 import torch
 import torch.nn as nn
 
-from mmdet import ops
+from mmdetection.mmdet import ops
 from ..registry import ROI_EXTRACTORS
 
 
